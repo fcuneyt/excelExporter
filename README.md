@@ -24,10 +24,10 @@ Result with sampleData.Json you will get an excel like as follows.
 City No |	City Nam	|	Country Nam	|	Town Names
 -------	| -------------		|	------------	|	-----
 1	|	les Escaldes	|	Europe/Andorra      
-							| First Town
-							| Second Town
+	|			|			| First Town
+	|			|			| Second Town
 2	|	Andorra la Vella	|	Europe/Andorra
-							| Third Town
+	|			|			| Third Town
 3	|	Umm al Qaywayn	|	Asia/Dubai
 4	|	Ras al-Khaimah	|	Asia/Dubai
 5	|	Khawr Fakkān	|	Asia/Dubai
