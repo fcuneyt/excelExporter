@@ -21,15 +21,15 @@ $.getJSON('Your-JSON-URL', null, function (response) {
 ```
 Result with sampleData.Json you will get an excel like as follows.
 
-City No |	City Name         |	Country Name        | Town Names
-1       | les Escaldes    	| Europe/Andorra      
-			                                            | First Town
-			                                            | Second Town
-2       | Andorra la Vella	| Europe/Andorra
-			                                            | Third Town
-3       | Umm al Qaywayn	  | Asia/Dubai
-4       | Ras al-Khaimah	  | Asia/Dubai
-5       | Khawr Fakkān	    | Asia/Dubai
+City No |	City Nam	|	Country Nam	|	Town Names
+1	|	les Escaldes	|	Europe/Andorra      
+			| First Town
+			| Second Town
+2	|	Andorra la Vella	|	Europe/Andorra
+			| Third Town
+3	|	Umm al Qaywayn	|	Asia/Dubai
+4	|	Ras al-Khaimah	|	Asia/Dubai
+5	|	Khawr Fakkān	|	Asia/Dubai
 
 With Table Selector
 ```html
