@@ -1,0 +1,70 @@
+{
+	"Items": [
+		{
+			"CityId": 1,
+			"CountryId": 1,
+			"Description": "les Escaldes",
+			"CountryReference": {
+				"CountryId": 1,
+				"ShortName": "AD",
+				"Description": "Europe/Andorra"
+			},
+			"TownList": [
+				{
+					"TownId": 1,
+					"Description": "First Town"
+				},
+				{
+					"TownId": 2,
+					"Description": "Second Town"
+				}
+			]
+		},
+		{
+			"CityId": 2,
+			"CountryId": 1,
+			"Description": "Andorra la Vella",
+			"TownList": [
+				{
+					"TownId": 3,
+					"Description": "Third Town"
+				}
+			],
+			"CountryReference": {
+				"CountryId": 1,
+				"ShortName": "AD",
+				"Description": "Europe/Andorra"
+			}
+		},
+		{
+			"CityId": 3,
+			"CountryId": 2,
+			"Description": "Umm al Qaywayn",
+			"CountryReference": {
+				"CountryId": 2,
+				"ShortName": "AE",
+				"Description": "Asia/Dubai"
+			}
+		},
+		{
+			"CityId": 4,
+			"CountryId": 2,
+			"Description": "Ras al-Khaimah",
+			"CountryReference": {
+				"CountryId": 2,
+				"ShortName": "AE",
+				"Description": "Asia/Dubai"
+			}
+		},
+		{
+			"CityId": 5,
+			"CountryId": 2,
+			"Description": "Khawr Fakkān",
+			"CountryReference": {
+				"CountryId": 2,
+				"ShortName": "AE",
+				"Description": "Asia/Dubai"
+			}
+		}
+	]
+}
