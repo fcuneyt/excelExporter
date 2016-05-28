@@ -77,8 +77,8 @@ excelExporter.fromTable('data-table');
 ```
 
 Result is
-Data	|	Second Data
--------	|	------
+Data		|	Second Data
+------------	|	-------------
 a1
 	|	b1
 	|	b2
