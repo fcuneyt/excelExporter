@@ -35,50 +35,53 @@ City No |	City Nam	|	Country Nam	|	Town Names
 With Table Selector
 ```html
 <table id="data-table">
-		<thead>
-			<tr>
-				<td>Data</td>
-				<td>Second Data</td>
-			</tr>
-		</thead>
-		<tr><td>a1</td></tr>
+	<thead>
 		<tr>
-			<td></td>
-			<td>
-				<table>
-					<tr>
-						<td>b1</td>
-					</tr>
-					<tr>
-						<td>b2</td>
-					</tr>
-				</table>
-			</td>
+			<td>Data</td>
+			<td>Second Data</td>
 		</tr>
-		<tr><td>a2</td></tr>
-		<tr>
-			<td></td>
-			<td>
-				<table>
-					<tr>
-						<td>c1</td>
-					</tr>
-					<tr>
-						<td>c2</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	```
-	```javascript
-	excelExporter.fromTable('data-table');
-	```
-	Result is
-	Data  | Second Data
-	a1
-	      | b1
-        | b2
-	a2
-	      | c1
-        | c2
+	</thead>
+	<tr><td>a1</td></tr>
+	<tr>
+		<td></td>
+		<td>
+			<table>
+				<tr>
+					<td>b1</td>
+				</tr>
+				<tr>
+					<td>b2</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td>a2</td></tr>
+	<tr>
+		<td></td>
+		<td>
+			<table>
+				<tr>
+					<td>c1</td>
+				</tr>
+				<tr>
+					<td>c2</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+```
+	
+```javascript
+excelExporter.fromTable('data-table');
+```
+
+Result is
+Data	|	Second Data
+---	|	------
+a1
+	|	b1
+	|	b2
+a2
+	| c1
+	| c2
