@@ -5,7 +5,7 @@ This library can export your data (from html table or JSON data) to excel.
 
 #Usage
 
-With JSON Data
+##With JSON Data
 ```javascript
 $.getJSON('Your-JSON-URL', null, function (response) {
   //Give it your data. Define which data to export e.g. 'Items'.
@@ -32,7 +32,7 @@ City No |	City Nam	|	Country Nam	|	Town Names
 4	|	Ras al-Khaimah	|	Asia/Dubai
 5	|	Khawr Fakkān	|	Asia/Dubai
 
-With Table Selector
+##With Table Selector
 ```html
 <table id="data-table">
 	<thead>
