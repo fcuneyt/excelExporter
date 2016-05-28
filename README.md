@@ -21,7 +21,7 @@ $.getJSON('Your-JSON-URL', null, function (response) {
 ```
 Result with sampleData.Json you will get an excel like as follows.
 
-City No |	City Nam	|	Country Nam	|	Town Names
+City No |	City Name	|	Country Name	|	Town Names
 -------	| -------------		|	------------	|	-----
 1	|	les Escaldes	|	Europe/Andorra      
 	|			|			| First Town
