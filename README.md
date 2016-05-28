@@ -80,9 +80,9 @@ Result is.
 
 Data		|	Second Data
 ------------	|	-------------
-a1
-	|	b1
-	|	b2
-a2
-	| c1
-	| c2
+a1		|
+		|	b1
+		|	b2
+a2		|
+		|	c1
+		|	c2
