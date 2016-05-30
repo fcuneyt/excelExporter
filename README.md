@@ -93,3 +93,8 @@ a2		|
 ```
 Install-Package excelExporter.js
 ```
+
+##Bower
+```
+bower install excelexporter
+```
