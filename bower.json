@@ -1,0 +1,28 @@
+{
+  "name": "excel-exporter",
+  "authors": [
+    "Tufan Tunc <tufan.tunc.91@gmail.com>",
+    "Cuneyt Bekar <f.cuneytbekar@hotmail.com>",
+  ],
+  "description": "Library can export your data from html table or json data to excel",
+  "main": "excelExporter.js",
+  "keywords": [
+    "excel",
+    "xls",
+    "export",
+    "json",
+    "table"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "globals"
+  ]
+}
