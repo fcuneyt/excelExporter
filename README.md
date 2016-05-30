@@ -86,3 +86,10 @@ a1		|
 a2		|
 		|	c1
 		|	c2
+
+#Installation
+
+##Nuget
+```
+Install-Package excelExporter.js
+```
