@@ -164,21 +164,32 @@ var excelExporter = {};
 	var stringify = function (table) {
 		return encodeURIComponent(template.replace("{table}", table.innerHTML));
 	};
-	var downloadFile = function (table) {
-		document.getElementById("container").appendChild(table);
+	var downloadFile = function (table, fileName) {
+		if (!fileName) {
+			var dt = new Date();
+			var yyyy = dt.getFullYear().toString();
+			var mm = (dt.getMonth() + 1).toString();
+			var dd = dt.getDate().toString();
+			var hh = dt.getHours().toString();
+			var min = dt.getMinutes().toString();
+			fileName = "export_" + yyyy + (mm[1] ? mm : "0" + mm[0]) + (dd[1] ? dd : "0" + dd[0]) + "-" + (hh[1] ? hh : "0" + hh[0]) + (min[1] ? min : "0" + min[0]) + ".xls";
+		}
+		if (fileName.indexOf(".xls") === -1) {
+			filename += ".xls";
+		}
 		var exportData = stringify(table);
 		var downloadLink = document.createElement("a");
 		downloadLink.href = type + exportData;
-		downloadLink.download = "export.xls";
+		downloadLink.download = fileName;
 		document.body.appendChild(downloadLink);
 		downloadLink.click();
 		document.body.removeChild(downloadLink);
 	};
-	this.fromTable = function (tableId) {
+	this.fromTable = function (tableId, fileName) {
 		var table = document.getElementById(tableId);
-		downloadFile(table);
+		downloadFile(table, fileName);
 	};
-	this.fromJson = function (data, selector, dataMap) {
+	this.fromJson = function (data, selector, dataMap, fileName) {
 		if (dataMap && dataMap.length > 0) {
 			keyMap = dataMap;
 		}
@@ -203,6 +214,6 @@ var excelExporter = {};
 		}
 
 		pushKeys(keys, "");
-		downloadFile(fillTable(exportData, keys, ""));
+		downloadFile(fillTable(exportData, keys, ""), fileName);
 	};
 }).apply((excelExporter));
