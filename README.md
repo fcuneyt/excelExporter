@@ -16,7 +16,9 @@ $.getJSON('Your-JSON-URL', null, function (response) {
 		{ "Description": "City Name" },
 		{ "CountryReference.Description": "Country Name" },
 		{ "TownList.Description": "Town Names"}
-	]);
+	],
+	//And give it your file name if you want.
+	'Your-File-Name.xls');
 });
 ```
 Result with sampleData.Json you will get an excel like as follows.
@@ -73,7 +75,9 @@ City No |	City Name	|	Country Name	|	Town Names
 ```
 	
 ```javascript
-excelExporter.fromTable('data-table');
+excelExporter.fromTable('data-table',
+	//And give it your file name if you want.
+	'Your-File-Name.xls');
 ```
 
 Result is.
