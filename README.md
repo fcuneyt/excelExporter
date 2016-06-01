@@ -34,7 +34,7 @@ City No |	City Name	|	Country Name	|	Town Names
 4	|	Ras al-Khaimah	|	Asia/Dubai
 5	|	Khawr Fakkān	|	Asia/Dubai
 
-##With Table Selector
+##With Table Id
 ```html
 <table id="data-table">
 	<thead>
