@@ -40,7 +40,7 @@ var excelExporter = {};
 			}
 		}
 	};
-	var getKeyIndex = function (key, parent) {
+	var getKeyIndex = function(key, parent) {
 		var index = -1;
 		for (var j = 0; j < allKeys.length; j++) {
 			var currentKey = allKeys[j];
@@ -51,7 +51,7 @@ var excelExporter = {};
 			}
 		}
 		return index;
-	}
+	};
 	var removeKey = function (key, parent) {
 		var index = getKeyIndex(key, parent);
 		if (index !== -1) {
@@ -68,11 +68,13 @@ var excelExporter = {};
 					? parent + "."
 					: "")
 				+ currentKey);
+			var childKeys;
 			if (Object.prototype.toString.call(dataKey) === "[object Array]") {
-				var childKeys = Object.keys(dataKey[0]);
+				childKeys = Object.keys(dataKey[0]);
 				removeKey(currentKey, parent);
 				pushKeys(childKeys, currentKey);
 				for (var j = 0; j < dataKey.length; j++) {
+					var childRow;
 					if (keyMap.length > 0) {
 						var childMapIndex = -1;
 						for (var l = 0; l < childKeys.length; l++) {
@@ -82,7 +84,7 @@ var excelExporter = {};
 							}
 						}
 						if (childMapIndex !== -1) {
-							var childRow = document.createElement("tr");
+							childRow = document.createElement("tr");
 							//calculate indent and insert empty cells.
 							for (var k = 0; k < childMapIndex; k++) {
 								childRow.appendChild(document.createElement("td"));
@@ -91,7 +93,7 @@ var excelExporter = {};
 							currentRowList.push(childRow);
 						}
 					} else {
-						var childRow = document.createElement("tr");
+						childRow = document.createElement("tr");
 						var keyIndex = getKeyIndex(childKeys[0], currentKey);
 						//calculate indent and insert empty cells.
 						for (var m = 0; m < keyIndex; m++) {
@@ -102,7 +104,7 @@ var excelExporter = {};
 					}
 				}
 			} else if (typeof (dataKey) === "object") {
-				var childKeys = Object.keys(dataKey);
+				childKeys = Object.keys(dataKey);
 				removeKey(currentKey, parent);
 				pushKeys(childKeys, currentKey);
 				currentRowList = fillDataRow(row, dataKey, childKeys, currentKey);
@@ -175,7 +177,7 @@ var excelExporter = {};
 			fileName = "export_" + yyyy + (mm[1] ? mm : "0" + mm[0]) + (dd[1] ? dd : "0" + dd[0]) + "-" + (hh[1] ? hh : "0" + hh[0]) + (min[1] ? min : "0" + min[0]) + ".xls";
 		}
 		if (fileName.indexOf(".xls") === -1) {
-			filename += ".xls";
+			fileName += ".xls";
 		}
 		var exportData = stringify(table);
 		var downloadLink = document.createElement("a");
